@@ -1,0 +1,6 @@
+/home/tianjiajia/clion/clion-2017.1.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tianjiajia/CLionProjects/selfLib
+-- Configuring done
+CMake Error: Cannot determine link language for target "selfLib".
+CMake Error: CMake can not determine linker language for target: selfLib
+-- Generating done
+-- Build files have been written to: /home/tianjiajia/CLionProjects/selfLib/cmake-build-debug

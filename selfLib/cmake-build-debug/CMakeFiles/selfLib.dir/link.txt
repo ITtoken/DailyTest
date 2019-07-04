@@ -1,0 +1,2 @@
+/usr/bin/ar qc libselfLib.a  CMakeFiles/selfLib.dir/library.cpp.o
+/usr/bin/ranlib libselfLib.a

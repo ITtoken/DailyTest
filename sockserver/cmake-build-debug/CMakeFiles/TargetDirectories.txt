@@ -1,0 +1,3 @@
+/home/tianjiajia/CLionProjects/DailyTest/sockserver/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tianjiajia/CLionProjects/DailyTest/sockserver/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tianjiajia/CLionProjects/DailyTest/sockserver/cmake-build-debug/CMakeFiles/sockserver.dir

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tianjiajia/CLionProjects/test/local_sock_udp_main.cpp
+stdio.h
+-
+sys/socket.h
+-
+sys/un.h
+-
+cstdlib
+-
+unistd.h
+-
+stddef.h
+-
+errno.h
+-
+

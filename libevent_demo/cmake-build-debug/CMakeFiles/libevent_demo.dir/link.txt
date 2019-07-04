@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/libevent_demo.dir/main.cpp.o  -o libevent_demo  -L/home/tianjiajia/CLionProjects/libevent_demo/libevent/lib -Wl,-rpath,/home/tianjiajia/CLionProjects/libevent_demo/libevent/lib 

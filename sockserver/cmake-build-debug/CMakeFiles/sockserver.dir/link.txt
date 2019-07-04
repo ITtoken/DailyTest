@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/sockserver.dir/local_server_udp_main.cpp.o  -o sockserver 

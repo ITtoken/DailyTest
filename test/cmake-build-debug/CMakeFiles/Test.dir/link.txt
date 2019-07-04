@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/Test.dir/local_sock_udp_main.cpp.o  -o Test 
