@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tianjiajia/CLionProjects/test/local_sock_udp_main.cpp" "/home/tianjiajia/CLionProjects/test/cmake-build-debug/CMakeFiles/Test.dir/local_sock_udp_main.cpp.o"
+  "/home/tianjiajia/CLionProjects/DailyTest/test/local_sock_udp_main.cpp" "/home/tianjiajia/CLionProjects/DailyTest/test/cmake-build-debug/CMakeFiles/Test.dir/local_sock_udp_main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

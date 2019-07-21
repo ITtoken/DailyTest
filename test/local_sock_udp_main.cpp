@@ -58,10 +58,6 @@ int main() {
             return EXIT_FAILURE;
         }
         printf("recv: %s\n", buff);
-
-        bzero(buff, sizeof(buff));
-
-
     }
 }
 

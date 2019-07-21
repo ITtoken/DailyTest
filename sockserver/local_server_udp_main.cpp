@@ -6,7 +6,6 @@
 #include <stddef.h>
 
 #define SERV_SOCK "/tmp/service.socket"
-
 int main() {
     /*Create server listen socket*/
     int listen_fd = socket(AF_UNIX, SOCK_DGRAM, 0);
@@ -29,25 +28,44 @@ int main() {
         return EXIT_FAILURE;
     }
 
+    struct sockaddr_un client_addr;
+    bzero(&client_addr, sizeof(client_addr));
+    size_t client_addr_len = 0;
+
     char buff[256];
+    bzero(buff, sizeof(buff));
     while (1) {
-        ssize_t ret = recvfrom(listen_fd, buff, sizeof(buff), 0, NULL, 0);
+        ssize_t ret = recvfrom(listen_fd, buff, sizeof(buff), 0,
+                               (struct sockaddr*)(&client_addr), (socklen_t*)&client_addr_len);
         if (ret <= 0) {
             perror("recv err");
             return EXIT_FAILURE;
         }
 
         printf("serv received: %s\n", buff);
+        printf("client: %s, len: %d\n", client_addr.sun_path, client_addr_len);
 
         int len = strlen(buff);
+        buff[len] = '\0';
         for (int i = 0; i < len; ++i) {
-            if (buff[i] >= 'a' || buff[i] <= 'z') {
+            if (buff[i] >= 'a' && buff[i] <= 'z') {
                 buff[i] -= 32;
             }
         }
 
-        sendto(listen_fd, buff, strlen(buff), 0, (struct sockaddr*)&sun, sockLen);
+        printf("buff= %s\n", buff);
+
+        ret = sendto(listen_fd, buff, strlen(buff), 0, (struct sockaddr*)&client_addr, (socklen_t)len);
+        if (ret <= 0) {
+            perror("send err");
+            //return EXIT_FAILURE;
+        }
+
+        printf("send: %d\n", ret);
+
         bzero(buff, sizeof(buff));
+        bzero(&client_addr, sizeof(client_addr));
+        size_t client_addr_len = 0;
     }
 
     close(listen_fd);

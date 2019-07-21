@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -march=native -O3 -pthread -g   CMakeFiles/siptest.dir/main.cpp.o  -o siptest  -L/home/tianjiajia/CLionProjects/siptest/includs  -L/home/tianjiajia/CLionProjects/siptest/lib -Wl,-rpath,/home/tianjiajia/CLionProjects/siptest/includs:/home/tianjiajia/CLionProjects/siptest/lib ../lib/libeXosip2.a ../lib/libosip2.a ../lib/libosipparser2.a -lresolv 
